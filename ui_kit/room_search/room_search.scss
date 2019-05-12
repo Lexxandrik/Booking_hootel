@@ -1,0 +1,68 @@
+@import '../mixins/mixins.scss';
+.search_room {
+
+    width: 380px;
+    height: 374px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.search_room__title {
+    margin: 40px 30px 20px 30px;
+    width: 320px;
+    height: 60px;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+}
+
+.date_picker {
+    @include base;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+h3.title {
+    margin-top: 0px;
+    margin-bottom: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+}
+
+.input {
+    @include input;
+    
+}
+
+.input i {
+    @include material_icons;
+}
+
+.guest {
+    @include base;
+}
+.input--wide {
+    @include input--wide;
+    text-transform: none;
+}
+.choose_room {
+    @include form_button;
+    display: flex;
+    align-items: center;
+}
+.choose_room span {
+    flex-grow: 1;
+}
