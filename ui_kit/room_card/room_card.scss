@@ -1,24 +1,31 @@
 @import '../mixins/mixins.scss';
 
-
 .primary_form {
     @include primary_form;
-    height: 374px;
 }
 
 .wrapper {
     @include wrapper;
 }
 
-.search_room_title {
-    @include h1_title;
+.room_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.room_number {
+    display: flex;
+    align-items: flex-end;
+}
+
+.room_number--type {
+    @include h3_title;
 }
 
 .date_picker {
     margin-bottom: 20.56px;
     display: flex;
     justify-content: space-between;
-    
 }
 
 h3.title {
@@ -36,13 +43,21 @@ h3.title {
 
 .input--wide {
     @include input--wide;
+    @include material_icons;
     text-transform: none;
 }
-.choose_room {
-    @include form_button;
-    display: flex;
-    align-items: center;
+
+.cost_count {
+    @include input_font;
 }
-.choose_room span {
-    flex-grow: 1;
+
+.cost_count span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    border: 1px solid black;
+    line-height: 50px;
+    text-align: center;
+    
 }
