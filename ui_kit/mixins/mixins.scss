@@ -23,7 +23,7 @@
 }
 
 @mixin h2_title {
-    font-family: 'Quicksand', sans-serif;
+    font-family: Quicksand, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -44,6 +44,40 @@
     color: #1F2041;
 }
 
+@mixin room_info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+@mixin room_type {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #BC9CFF;
+}
+
+@mixin room_cost--bold {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+}
+
+@mixin per_day {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+}
+
 @mixin input {
     display: flex;
     justify-content: space-around;
@@ -51,10 +85,24 @@
     height: 44px;
     align-items: center;
     background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid rgba(47, 49, 88, 0.25);
     box-sizing: border-box;
     border-radius: 4px;
 
+}
+
+@mixin input--wide {
+    margin: 5px 0 31px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    width: 100%;
+    height: 44px;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
 @mixin input_font {
@@ -88,22 +136,3 @@
     line-height: 15px;
 }
 
-@mixin input--wide {
-    margin: 5px 0 31px 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 15px;
-    width: 100%;
-    height: 44px;
-    align-items: center;
-    background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 4px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-    color: rgba(31, 32, 65, 0.75);
-}

@@ -9,17 +9,33 @@
 }
 
 .room_info {
-    display: flex;
-    justify-content: space-between;
+    @include room_info;
 }
 
 .room_number {
-    display: flex;
-    align-items: flex-end;
+    vertical-align: bottom;
+}
+
+.room_number--number {
+    @include h2_title;
+
+}
+
+.number {
+    @include h2_title;
+    font-size: 20px;
 }
 
 .room_number--type {
-    @include h3_title;
+    @include room_type;
+}
+
+.room_cost--bold {
+    @include room_cost--bold;
+}
+
+.per_day {
+    @include per_day;
 }
 
 .date_picker {
@@ -43,21 +59,51 @@ h3.title {
 
 .input--wide {
     @include input--wide;
-    @include material_icons;
+    @include input_font;
     text-transform: none;
+    margin-bottom: 0;
+}
+
+.input--wide i {
+    @include material_icons;
 }
 
 .cost_count {
     @include input_font;
+    display: flex;
+    // justify-content: space-between;
 }
 
-.cost_count span {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    font-size: 20px;
-    border: 1px solid black;
-    line-height: 50px;
-    text-align: center;
-    
+.cost_count_total {
+    text-align: right;
+}
+
+.cost_total {
+    font-family: Quicksand, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: #1F2041;
+    position: relative;
+    // display: flex;
+    align-items: flex-end;
+    height: 24px;
+}
+
+.cost_total_line {
+    border-style: none;
+    box-sizing: border-box;
+    width: 10px;
+    height: 1px;
+    border: 0.5px dotted rgba(31, 32, 65, 0.25);
+
+}
+
+.cost_total__word {
+    text-align: left;
+}
+
+.cost_total_price {
+    text-align: right;
 }
