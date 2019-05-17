@@ -69,16 +69,43 @@ h3.title {
 }
 
 .cost_count {
+    
     @include input_font;
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    
+}
+.info {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 50%;
+}
+
+// .cost_count_per_day p:not(:last-child)::after {
+//     height: 20px;
+//     content: "	\1F6C8";
+//     color: rgba(31, 32, 65, 0.25);
+// }
+
+.cost_count i {
+    background: #ffffff;
+    line-height: 14px;
+    vertical-align: middle;
+    filter: invert(50%);
 }
 
 .cost_count_total {
     text-align: right;
 }
 
+
 .cost_total {
+    width: 100%;
     font-family: Quicksand, sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -86,24 +113,31 @@ h3.title {
     line-height: 24px;
     color: #1F2041;
     position: relative;
-    // display: flex;
-    align-items: flex-end;
     height: 24px;
-}
-
-.cost_total_line {
-    border-style: none;
-    box-sizing: border-box;
-    width: 10px;
-    height: 1px;
-    border: 0.5px dotted rgba(31, 32, 65, 0.25);
-
+    margin-bottom: 20px;
 }
 
 .cost_total__word {
-    text-align: left;
+    overflow: hidden;
+    position: relative;
 }
 
-.cost_total_price {
-    text-align: right;
+.cost_total__word::after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 59%;
+    height: 1px;
+    border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.book_room {
+    @include form_button;
+}
+
+.book_room span {
+    flex-grow: 1;
+    margin-left: 3vh;
 }
